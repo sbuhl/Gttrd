@@ -122,28 +122,41 @@ Open this folder up and you will see something similar to the following:
 
 Back in the day it was Eric Meyer’s css reset, but now you should really be using normalize.css It takes out any of the discrepancies between browser’s default settings. Making all of the default styles the same
 
-Copy the fonts directory into the root of the project with the other folders we just created. Open up javascripts and copy the bootstrap.js file into the js folder of our project. Lastly, open the stylesheets directory and copy the bootstrap.scss file and bootstrap folder into the css folder of our project. Our files and folders should now look like this...
+
+Note : If you want to use Font Awesome icons in your project, do not forget to include it : 
+```
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+```
 
 
-Good work! Now, find the instafeed.min.js and Modernizr files you downloaded earlier and copy them into the js folder. We just need to set up a few more things before we can begin to build the layout.
+## Let's begging to code
 
-Sass Setup
+Open up index.html and enter the following base HTML:
 
-Now is the time to set our project up in the Sass app you've chosen to use. In Koala this is a question of dragging the folder into the app window. I believe it is a similar process for the others as well. The next thing I always do when setting things up is look at the Sass compile options and, if available, check the box to use Autoprefixer. This handy addition will parse our Sass file and add any vendor prefixes we need so we don't need to worry about writing them ourselves. Feel free to play about with the settings your Sass app provides to get the best set up for you. I like to keep things simple and will normally just check on Autoprefix and an output style of Expanded (Compressed in production).
-
-Adding Files
-
-Open up the project in whatever editor you use so we can add a few files.
-
-First of all under the css directory add a file called style.scss. Then inside the js folder add a file called app.js.
-
-Make sure you refresh the Sass app you are using so it picks up the new files. Some do this automatically but it's best to check and manually refresh if needed.
-
-I think that is all the file set up for now. We can get on with building the layout!
-
-Begin the Build
-
-Open up index.html and enter (or copy/paste) the following base HTML:
+```html
+	<!DOCTYPE html>
+	<html>
+	  <head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Gratitude Log</title>
+	    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+	    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+	  </head>
+	  <body>
+	  <section class="section">
+	    <div class="container">
+	      <h1 class="title">
+	        Gratitude Log
+	      </h1>
+	      <p class="subtitle">
+	        My first website with <strong>Bulma</strong>!
+	      </p>
+	    </div>
+	  </section>
+	  </body>
+	</html>
+```
 
 We have our first bit of code! Let's break it down. 
 
@@ -151,11 +164,6 @@ The <head> section contains the necessary viewport tag so our media queries work
 
 The <body> element contains four other elements to hold each of the bands which appear on the design. I have applied some descriptive classes to the <section> elements so we can clearly see what they will be used for.
 
-Referencing JavaScript Files
-
-Add the following snippet below the footer-bottom section:
-
-These <script> tags point to our various JavaScript libraries including jQuery from Google's CDN which is required by Bootstrap.
 
 Styles
 
