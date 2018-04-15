@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sbuhl/Gttrd#readme",
   "dependencies": {
-    "bulma": "^0.7.0"
+    "bulma": "^0.7.0",
+    "normalize.css": "^8.0.0"
   }
 }

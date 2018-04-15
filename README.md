@@ -8,6 +8,7 @@ In this tutorial I am going to run through the process of creating an elegant la
 To build this landing page, we will use a few tools. I would like to learn a new framework : [Bulma](https://bulma.io). I've never used it before. 
 
 * [Bulma](https://bulma.io)
+* [Normalize.css](http://necolas.github.io/normalize.css/)
 * [Chillin' in the sun]()
 * [PT Serif]()
 * [Playfair Display]()
@@ -113,6 +114,13 @@ Now, I have a new file and a new folder :
 In the `node_modules`, there is only one folder for *Bulma*
 Open this folder up and you will see something similar to the following:
 
+## Install normalize
+
+```
+	npm install normalize.css
+```
+
+Back in the day it was Eric Meyer’s css reset, but now you should really be using normalize.css It takes out any of the discrepancies between browser’s default settings. Making all of the default styles the same
 
 Copy the fonts directory into the root of the project with the other folders we just created. Open up javascripts and copy the bootstrap.js file into the js folder of our project. Lastly, open the stylesheets directory and copy the bootstrap.scss file and bootstrap folder into the css folder of our project. Our files and folders should now look like this...
 
