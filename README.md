@@ -2,7 +2,7 @@
 
 *April 2018*
 
-In this tutorial I am going to run through the process of creating an elegant *Gratitude Log* landing page as designed [by Tomas Laurinavicius.](https://webdesign.tutsplus.com/tutorials/design-an-elegant-gratitude-log-landing-page-with-photoshop--cms-22787).
+In this tutorial I am going to run through the process of creating a *Gratitude Log* landing page as designed [by Tomas Laurinavicius.](https://webdesign.tutsplus.com/tutorials/design-an-elegant-gratitude-log-landing-page-with-photoshop--cms-22787).
 
 To build this page, we will use :
 
@@ -21,13 +21,13 @@ To build this page, we will use :
 
 Bulma is an open source CSS framework based on Flexbox and created by [Jeremy Thomas](https://jgthms.com/). I wanted to learn a new framework,  discover a new tool and I have no doubt it will improve my CSS skills. Bulma is an alternative to Bootstrap, Jeremy explain how [here](https://bulma.io/alternative-to-bootstrap/).
 
-## Install Bulma
+## Install [Bulma](https://bulma.io)
 
 First, let's install Bulma. There are several ways to use Bulma. Here, I decided to install the Bulma's package with `npm` :
-* Open your terminal
-* Create a new folder
-* Initiate `npm`
-* Install `bulma`
+1. Open your terminal
+1. Create a new folder
+1. Initiate `npm`
+1. Install `bulma`
 
 
 ```shell
@@ -65,11 +65,13 @@ So far, here are the files and the folder structure :
 	- bulma/
 	- normalize.css/
 * index.html
+
+
 Create the folders needed and already add the images.
 
-## Let's begging to code
+## Let's dive into the code
 
-Open up index.html and enter the following base HTML:
+Open up `index.html` and enter the following base HTML:
 
 ```html
 	<!DOCTYPE html>
