@@ -67,61 +67,16 @@
 <pre><code class="shell">	npm init
 </code></pre>
 
-<pre><code class="shell">This utility will walk you through creating a package.json file.
-It only covers the most common items, and tries to guess sensible defaults.
-
-See `npm help json` for definitive documentation on these fields
-and exactly what they do.
-
-Use `npm install &lt;pkg&gt;` afterwards to install a package and
-save it as a dependency in the package.json file.
-
-Press ^C at any time to quit.
-package name: (gttrd)
-version: (1.0.0)
-description:
-entry point: (index.js)
-test command:
-git repository: (https://github.com/sbuhl/Gttrd.git)
-keywords:
-author: Sébastien BÜHL
-license: (ISC)
-About to write to /Users/cerrer/Sites/Gttrd/package.json:
-
-{
-  &quot;name&quot;: &quot;gttrd&quot;,
-  &quot;version&quot;: &quot;1.0.0&quot;,
-  &quot;description&quot;: &quot;*avril 2018*&quot;,
-  &quot;main&quot;: &quot;index.js&quot;,
-  &quot;scripts&quot;: {
-    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
-  },
-  &quot;repository&quot;: {
-    &quot;type&quot;: &quot;git&quot;,
-    &quot;url&quot;: &quot;git+https://github.com/sbuhl/Gttrd.git&quot;
-  },
-  &quot;author&quot;: &quot;&quot;,
-  &quot;license&quot;: &quot;ISC&quot;,
-  &quot;bugs&quot;: {
-    &quot;url&quot;: &quot;https://github.com/sbuhl/Gttrd/issues&quot;
-  },
-  &quot;homepage&quot;: &quot;https://github.com/sbuhl/Gttrd#readme&quot;
-}
-
-
-Is this OK? (yes)
-</code></pre>
-
-<p>After following the instruction, I will have a new file in my folder : package.json.
+<p>After following the instruction, you will have a new file in your folder : package.json.
 Now, I can install bulma :</p>
 
-<pre><code>	npm install bulma
+<pre><code class="shell">	npm install bulma
 	npm notice created a lockfile as package-lock.json. You should commit this file.
 	+ bulma@0.7.0
 	added 1 package from 1 contributor in 2.019s
 </code></pre>
 
-<p>Now, I have a new file and a new folder :</p>
+<p>Now, you have a new file and a new folder :</p>
 
 <ul>
 <li>node_modules/</li>
@@ -133,14 +88,14 @@ Open this folder up and you will see something similar to the following:</p>
 
 <h2 id="installnormalize">Install normalize</h2>
 
-<pre><code>	npm install normalize.css
+<pre><code class="shell">	npm install normalize.css
 </code></pre>
 
-<p>Back in the day it was Eric Meyer’s css reset, but now you should really be using normalize.css It takes out any of the discrepancies between browser’s default settings. Making all of the default styles the same</p>
+<p>Back in the day it was Eric Meyer’s css reset, but now you should really be using normalize.css It takes out any of the discrepancies between browser’s default settings. Making all of the default styles the same.</p>
 
-<p>Note : If you want to use Font Awesome icons in your project, do not forget to include it :</p>
+<p>We will need one icon, so we will use <a href="http://fontawesome.com/">Font Awesome</a> in our project, so do not forget to include it :</p>
 
-<pre><code>	&lt;script defer src=&quot;https://use.fontawesome.com/releases/v5.0.7/js/all.js&quot;&gt;&lt;/script&gt;
+<pre><code class="html">	&lt;script defer src=&quot;https://use.fontawesome.com/releases/v5.0.7/js/all.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 
 <h2 id="letsbeggingtocode">Let&#8217;s begging to code</h2>

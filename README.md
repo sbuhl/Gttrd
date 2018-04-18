@@ -47,67 +47,22 @@ We will keep the structure really simple. You will see that we only need a few o
 I will install Bulma using `npm`.
 
 So first, I've to initiate npm : 
+
 ```shell
 	npm init
 ```
 
+After following the instruction, you will have a new file in your folder : package.json.
+Now, I can install bulma : 
 
 ```shell
-This utility will walk you through creating a package.json file.
-It only covers the most common items, and tries to guess sensible defaults.
-
-See `npm help json` for definitive documentation on these fields
-and exactly what they do.
-
-Use `npm install <pkg>` afterwards to install a package and
-save it as a dependency in the package.json file.
-
-Press ^C at any time to quit.
-package name: (gttrd)
-version: (1.0.0)
-description:
-entry point: (index.js)
-test command:
-git repository: (https://github.com/sbuhl/Gttrd.git)
-keywords:
-author: Sébastien BÜHL
-license: (ISC)
-About to write to /Users/cerrer/Sites/Gttrd/package.json:
-
-{
-  "name": "gttrd",
-  "version": "1.0.0",
-  "description": "*avril 2018*",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sbuhl/Gttrd.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sbuhl/Gttrd/issues"
-  },
-  "homepage": "https://github.com/sbuhl/Gttrd#readme"
-}
-
-
-Is this OK? (yes)
-```
-
-After following the instruction, I will have a new file in my folder : package.json.
-Now, I can install bulma : 
-```
 	npm install bulma
 	npm notice created a lockfile as package-lock.json. You should commit this file.
 	+ bulma@0.7.0
 	added 1 package from 1 contributor in 2.019s
 ```
 
-Now, I have a new file and a new folder :
+Now, you have a new file and a new folder :
 * node_modules/
 * package-lock.json
 
@@ -116,15 +71,14 @@ Open this folder up and you will see something similar to the following:
 
 ## Install normalize
 
-```
+```shell
 	npm install normalize.css
 ```
 
-Back in the day it was Eric Meyer’s css reset, but now you should really be using normalize.css It takes out any of the discrepancies between browser’s default settings. Making all of the default styles the same
+Back in the day it was Eric Meyer’s css reset, but now you should really be using normalize.css It takes out any of the discrepancies between browser’s default settings. Making all of the default styles the same.
 
-
-Note : If you want to use Font Awesome icons in your project, do not forget to include it : 
-```
+We will need one icon, so we will use [Font Awesome](http://fontawesome.com/) in our project, so do not forget to include it : 
+```html
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 ```
 
