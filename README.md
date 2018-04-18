@@ -337,3 +337,7 @@ img{
 	font-family: 'source_sans_proregular', serif;
 }
 ```
+
+
+Here the result : 
+![Header Area Step 2](PSD/headerAreaHTMLStep2.png)
