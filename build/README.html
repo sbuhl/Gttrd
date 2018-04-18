@@ -138,339 +138,162 @@ node_modules      package-lock.json package.json
 <p>We want something approaching this :
 <img src="/PSD/headerArea.png" alt="Header Area" /></p>
 
-<pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-    &lt;title&gt;Gratitude Log&lt;/title&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;node_modules/normalize.css/normalize.css&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;node_modules/bulma/css/bulma.min.css&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/grttdStyle.css&quot;&gt;
-    &lt;script defer src=&quot;https://use.fontawesome.com/releases/v5.0.7/js/all.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  	&lt;section class=&quot;hero is-info is-large&quot;&gt;
-		&lt;div class=&quot;hero-head&quot;&gt;
-		    &lt;nav class=&quot;navbar&quot;&gt;
-		      &lt;div class=&quot;container&quot;&gt;
-		        &lt;div class=&quot;navbar-brand&quot;&gt;
-		          &lt;a class=&quot;navbar-item&quot;&gt;
-		            &lt;h1&gt;Grttd&lt;/h1&gt;
-		          &lt;/a&gt;
-		          &lt;span class=&quot;navbar-burger burger&quot; data-target=&quot;navbarMenuHeroB&quot;&gt;
-		            &lt;span&gt;&lt;/span&gt;
-		            &lt;span&gt;&lt;/span&gt;
-		            &lt;span&gt;&lt;/span&gt;
-		          &lt;/span&gt;
-		        &lt;/div&gt;
-		        &lt;div id=&quot;navbarMenuHeroB&quot; class=&quot;navbar-menu&quot;&gt;
-		          &lt;div class=&quot;navbar-end&quot;&gt;
-		            &lt;a class=&quot;navbar-item is-active&quot;&gt;
-		              Home
-		            &lt;/a&gt;
-		            &lt;a class=&quot;navbar-item&quot;&gt;
-		              Get involved
-		            &lt;/a&gt;
-		            &lt;a class=&quot;navbar-item&quot;&gt;
-		              Get inspired
-		            &lt;/a&gt;
-		            &lt;a class=&quot;navbar-item&quot;&gt;
-		              Stories
-		            &lt;/a&gt;
-		            &lt;a class=&quot;navbar-item&quot;&gt;
-		              Contact
-		            &lt;/a&gt;
-		            &lt;span class=&quot;navbar-item&quot;&gt;
-		              &lt;a class=&quot;button is-info is-inverted&quot;&gt;
-		                &lt;span class=&quot;icon&quot;&gt;
-		                  &lt;i class=&quot;fas fa-sign-in-alt&quot;&gt;&lt;/i&gt;
-		                &lt;/span&gt;
-		                &lt;span&gt;Sign up&lt;/span&gt;
-		              &lt;/a&gt;
-		            &lt;/span&gt;
-		          &lt;/div&gt;
-		        &lt;/div&gt;
-		      &lt;/div&gt;
-		    &lt;/nav&gt;
-		  &lt;/div&gt;
+<p>I think that a good start is to use the <a href="https://bulma.io/documentation/layout/hero/">hero class</a> from Bulma. With that in place, you just have to erase the useless html and make some CSS adjustment.</p>
 
-		&lt;div class=&quot;hero-body&quot;&gt;
-		    &lt;div class=&quot;container has-text-centered&quot;&gt;
-		      &lt;p class=&quot;title&quot;&gt;
-		        Being Grateful Makes&lt;br&gt; You More Successful
-		      &lt;/p&gt;
-		      &lt;p class=&quot;subtitle&quot;&gt;
-		        Create Gratitude Log. Be happier. Change your life.
-		      &lt;/p&gt;
-		      &lt;a class=&quot;button is-info is-inverted&quot;&gt;
-		        &lt;span&gt;Start Living&lt;/span&gt;
-		        &lt;span class=&quot;icon&quot;&gt;
-		            &lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;
-		        &lt;/span&gt;
-		       &lt;/a&gt;
-		    &lt;/div&gt;
-  		&lt;/div&gt;
-	&lt;/section&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<ol>
+<li>The html :</li>
+</ol>
+
+<pre><code class="html">&lt;section class=&quot;hero is-success is-fullheight&quot;&gt;
+    <!-- Hero head: will stick at the top -->
+    &lt;div class=&quot;hero-head&quot;&gt;
+      &lt;header class=&quot;navbar&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+          &lt;div class=&quot;navbar-brand&quot;&gt;
+            &lt;a class=&quot;navbar-item&quot;&gt;
+              &lt;span class=&quot;grttd&quot;&gt;Grttd&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;span class=&quot;navbar-burger burger&quot; data-target=&quot;navbarMenuHeroC&quot;&gt;
+              &lt;span&gt;&lt;/span&gt;
+              &lt;span&gt;&lt;/span&gt;
+              &lt;span&gt;&lt;/span&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div id=&quot;navbarMenuHeroC&quot; class=&quot;navbar-menu&quot;&gt;
+            &lt;div class=&quot;navbar-end&quot;&gt;
+              &lt;a class=&quot;navbar-item is-active&quot;&gt;Home&lt;/a&gt;
+              &lt;a class=&quot;navbar-item&quot;&gt;Get Involved&lt;/a&gt;
+              &lt;a class=&quot;navbar-item&quot;&gt;Get Inspired&lt;/a&gt;
+              &lt;a class=&quot;navbar-item&quot;&gt;Stories&lt;/a&gt;
+              &lt;a class=&quot;navbar-item&quot;&gt;Contact&lt;/a&gt;
+              &lt;span class=&quot;navbar-item&quot;&gt;
+                &lt;a class=&quot;button is-success is-inverted&quot;&gt;
+                  &lt;span class=&quot;icon&quot;&gt;
+                    &lt;i class=&quot;fas fa-sign-in-alt&quot;&gt;&lt;/i&gt;
+                  &lt;/span&gt;
+                  &lt;span&gt;Sign up&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/header&gt;
+    &lt;/div&gt;
+
+    <!-- Hero content: will be in the middle -->
+    &lt;div class=&quot;hero-body&quot;&gt;
+      &lt;div class=&quot;container has-text-centered&quot;&gt;
+        &lt;h1 class=&quot;title&quot;&gt;
+          Being Grateful Makes&lt;br&gt;You More Successful
+        &lt;/h1&gt;
+        &lt;h2 class=&quot;subtitle&quot;&gt;
+          Create gratitude log. Be happier. Change your life.
+        &lt;/h2&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 </code></pre>
 
-<pre><code class="css">/*! Generated by Font Squirrel (https://www.fontsquirrel.com) on April 16, 2018 */
-
-
-
-@font-face {
-    font-family: 'source_sans_problack';
-    src: url('../fonts/sourcesanspro-black-webfont.woff2') format('woff2'),
-         url('../fonts/sourcesanspro-black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+<pre><code class="css">:root{
+	--dark-grey : #0E0E0E;
+	--green  	: #96c218;
 }
-
-
-
-
+/*! Generated by Font Squirrel (https://www.fontsquirrel.com) on April 18, 2018 */
 @font-face {
-    font-family: 'source_sans_problack_italic';
-    src: url('../fonts/sourcesanspro-blackit-webfont.woff2') format('woff2'),
-         url('../fonts/sourcesanspro-blackit-webfont.woff') format('woff');
+    font-family: 'playfair_displaybold_italic';
+    src: url('../fonts/playfairdisplay-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/playfairdisplay-bolditalic-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'source_sans_probold';
-    src: url('../fonts/sourcesanspro-bold-webfont.woff2') format('woff2'),
-         url('../fonts/sourcesanspro-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'source_sans_probold_italic';
-    src: url('../fonts/sourcesanspro-boldit-webfont.woff2') format('woff2'),
-         url('../fonts/sourcesanspro-boldit-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'source_sans_proextralight';
-    src: url('../fonts/sourcesanspro-extralight-webfont.woff2') format('woff2'),
-         url('../fonts/sourcesanspro-extralight-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'source_sans_proXLtIt';
-    src: url('../fonts/sourcesanspro-extralightit-webfont.woff2') format('woff2'),
-         url('../fonts/sourcesanspro-extralightit-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'source_sans_proitalic';
-    src: url('../fonts/sourcesanspro-it-webfont.woff2') format('woff2'),
-         url('../fonts/sourcesanspro-it-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'source_sans_prolight';
-    src: url('../fonts/sourcesanspro-light-webfont.woff2') format('woff2'),
-         url('../fonts/sourcesanspro-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'source_sans_prolight_italic';
-    src: url('../fonts/sourcesanspro-lightit-webfont.woff2') format('woff2'),
-         url('../fonts/sourcesanspro-lightit-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
+    font-style: normal;}
 @font-face {
     font-family: 'source_sans_proregular';
     src: url('../fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
          url('../fonts/sourcesanspro-regular-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'source_sans_prosemibold';
-    src: url('../fonts/sourcesanspro-semibold-webfont.woff2') format('woff2'),
-         url('../fonts/sourcesanspro-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'source_sans_proSBdIt';
-    src: url('../fonts/sourcesanspro-semiboldit-webfont.woff2') format('woff2'),
-         url('../fonts/sourcesanspro-semiboldit-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-/*! Generated by Font Squirrel (https://www.fontsquirrel.com) on April 16, 2018 */
-
-
-
-@font-face {
-    font-family: 'playfair_displayblack';
-    src: url('../fonts/playfairdisplay-black-webfont.woff2') format('woff2'),
-         url('../fonts/playfairdisplay-black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'playfair_displayblack_italic';
-    src: url('../fonts/playfairdisplay-blackitalic-webfont.woff2') format('woff2'),
-         url('../fonts/playfairdisplay-blackitalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
+    font-style: normal;}
 @font-face {
     font-family: 'playfair_displayitalic';
     src: url('../fonts/playfairdisplay-italic-webfont.woff2') format('woff2'),
          url('../fonts/playfairdisplay-italic-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
+    font-style: normal;}
 @font-face {
-    font-family: 'playfair_displayregular';
-    src: url('../fonts/playfairdisplay-regular-webfont.woff2') format('woff2'),
-         url('../fonts/playfairdisplay-regular-webfont.woff') format('woff');
+    font-family: 'source_sans_probold';
+    src: url('../fonts/sourcesanspro-bold-webfont.woff2') format('woff2'),
+         url('../fonts/sourcesanspro-bold-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
-
-}
-body{
-	color: #0e0e0e;
-}
-h1{
-	font-family: 'playfair_displayblack_italic', serif;
-	font-size: 1.6em;
-	text-transform: none;
-}
-.hero{
-	position: relative;
-}
+    font-style: normal;}
+@font-face {
+    font-family: 'pt_serifbold_italic';
+    src: url('../fonts/ptf76f-webfont.woff2') format('woff2'),
+         url('../fonts/ptf76f-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+@font-face {
+    font-family: 'source_sans_prosemibold';
+    src: url('../fonts/sourcesanspro-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/sourcesanspro-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+@font-face {
+    font-family: 'playfair_displayblack';
+    src: url('../fonts/playfairdisplay-black-webfont.woff2') format('woff2'),
+         url('../fonts/playfairdisplay-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+@font-face {
+    font-family: 'pt_serifregular';
+    src: url('../fonts/ptf55f-webfont.woff2') format('woff2'),
+         url('../fonts/ptf55f-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+.hero.is-success{
+	background-color: transparent;
+	border: none;
+	position: relative;}
 .hero-head{
 	position: absolute;
-	background-color: white;
-	align-self: center;
 	top: 50px;
 	width: 90%;
-}
-.hero.is-info{
-	background-color: white;
-	color: #0e0e0e;
-}
-.hero.is-info a.navbar-item, .button.is-info.is-inverted{
+	background-color: #fff;
+	align-self: center;}
+.hero.is-success a:not(.button):not(.dropdown-item):not(.tag),
+.navbar-burger{
+	color: var(--dark-grey);}
+.navbar-item{
 	font-family: 'source_sans_proregular', sans-serif;
-	text-transform: uppercase;
-	color: #0e0e0e;
-}
-.hero.is-info a.navbar-item.is-active{
-	background: none;
-	border-bottom: 1px solid #0e0e0e;
-}
-.hero.is-info a.navbar-item:hover{
-	background: none;
-	border-bottom: 1px solid #0e0e0e;
-}
-.hero-body{
-	background:url(../img/summerTime.jpg) no-repeat center center;
-	background-size: cover;
-}
-
-.title{
-	font-family: 'source_sans_problack', sans-serif;
-	font-size: 4em;
-}
-.subtitle{
-	font-family: 'playfair_displayitalic', serif;
-}
+	font-size: 0.875em;
+	text-transform: uppercase;}
+.hero.is-success a.navbar-item.is-active,
+.hero.is-success a.navbar-item:hover{
+	background-color: transparent;
+	border-bottom: 1px solid var(--dark-grey);}
+span.grttd{
+	font-family: 'playfair_displaybold_italic', serif;
+	font-size: 1.625em;
+	text-transform: none;}
+.button.is-success.is-inverted{
+	color: var(--green);}
 .button{
 	border-radius: 0;
-	padding: 1em 2em;
+	font-family: 'source_sans_probold', serif;}
+/* Add the picture and made it take all the place */
+.hero-body{
+	background:url(../img/summerTime.jpg) no-repeat center center;
+	background-size: cover;}
+h1.title{
+	font-family: 'source_sans_probold', serif;
+	font-size: 5em;
+	line-height: 1.1em;}
+h2.subtitle{
+	font-family: 'playfair_displayitalic', serif;
+	font-size: 1.625em;
+	line-height: 1.1em;
 }
-
-@media screen and (max-width: 768px){
-	.hero-head{
-		position: relative;
-		align-self: center;
-		top: 0;
-		width: 100%;
-	}
-}
-
 </code></pre>
+
+<p>This code allows us to arrive to this :
+<img src="PSD/headerAreaHTMLStep1.jpg" alt="Header Area Step 1" /></p>
 
 </body>
 </html>
