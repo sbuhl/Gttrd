@@ -3,9 +3,9 @@
 *avril 2018*
 
 
-In this tutorial I am going to run through the process of creating an elegant landing page as designed in a previous tutorial by Tomas Laurinavicius.
+In this tutorial I am going to run through the process of creating an elegant *Gratitude Log* landing page as designed in a [previous tutorial by Tomas Laurinavicius](https://webdesign.tutsplus.com/tutorials/design-an-elegant-gratitude-log-landing-page-with-photoshop--cms-22787).
 
-To build this landing page, we will use a few tools. I would like to learn a new framework : [Bulma](https://bulma.io). I've never used it before. 
+To build this landing page, we will use a few tools and medias :
 
 * [Bulma](https://bulma.io)
 * [Normalize.css](http://necolas.github.io/normalize.css/)
@@ -17,19 +17,19 @@ To build this landing page, we will use a few tools. I would like to learn a new
 
 You can notice that we use the same tools as Thomas in the building of the design.
 
+I would like to learn a new framework : [Bulma](https://bulma.io). 
+
 ## Why Bulma and not Bootstrap ?
 
-I've already build some websites with [Bootstrap](http://getbootstrap.com). I really enjoy playing with Bootstrap. It's friendly, the documentation is great, they're a lot of tutoriel, it's responsive, it's evolving, etc... But. I wanted to new a new framework. Just to discover a new tool and new techs. And I have no doubt it will improve my CSS skills.
+I've already build some websites with [Bootstrap](http://getbootstrap.com). I really enjoy playing with this CSS Framework. It's friendly, the documentation is great, they're a lot of tutoriel, it's responsive, it's evolving, etc... But. I wanted to learn a new framework. Just to discover a new tool and new techs. And I have no doubt it will improve my CSS skills. 
 
 ### Is Bulma different from Bootstrap ?
 
-Short answer : Yes ! Long answer : 
-
-__To be continued__
+Short answer : Yes ! Long answer : [see here :-) ](https://bulma.io/alternative-to-bootstrap/)
 
 ## File and Folder Structure
 
-We will keep the structure really simple. We don't need JavaScript or a lot of CSS or images. So, go ahead and create your folders :
+We will keep the structure really simple. You will see that we only need a few of JS. So, go ahead and create your folders :
 
 * css/ 
 	- grtldStyle.css
@@ -47,12 +47,12 @@ We will keep the structure really simple. We don't need JavaScript or a lot of C
 I will install Bulma using `npm`.
 
 So first, I've to initiate npm : 
-```
+```shell
 	npm init
 ```
 
 
-```
+```shell
 This utility will walk you through creating a package.json file.
 It only covers the most common items, and tries to guess sensible defaults.
 
@@ -70,7 +70,7 @@ entry point: (index.js)
 test command:
 git repository: (https://github.com/sbuhl/Gttrd.git)
 keywords:
-author:
+author: Sébastien BÜHL
 license: (ISC)
 About to write to /Users/cerrer/Sites/Gttrd/package.json:
 

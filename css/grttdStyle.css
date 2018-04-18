@@ -235,6 +235,10 @@ h1{
 	background-size: cover;
 }
 
+.container > .card{
+    background-color: transparent;
+}
+
 .title{
 	font-family: 'source_sans_problack', sans-serif;
 	font-size: 1.7em;
@@ -304,8 +308,14 @@ h5{
 .inspired{
 	color: var(--grey);
 }
+.media{
+    justify-content: center;
+}
 .media-left{
     position: relative;
+}
+.media-content{
+    flex-grow: 0;
 }
 .footer{
 	background-color: #2d2d2d;
