@@ -113,7 +113,6 @@ We want something approaching this :
 I think that a good start is to use the [hero class](https://bulma.io/documentation/layout/hero/) from Bulma. With that in place, you just have to erase the useless html and make some CSS adjustment.
 1. The html :
 
-
 ``` html
 <section class="hero is-success is-fullheight">
     <!-- Hero head: will stick at the top -->
@@ -164,6 +163,8 @@ I think that a good start is to use the [hero class](https://bulma.io/documentat
     </div>
   </section>
 ```
+
+1. The css :
 
 ``` css
 :root{
@@ -265,4 +266,74 @@ h2.subtitle{
 ```
 
 This code allows us to arrive to this :
-![Header Area Step 1](PSD/headerAreaHTMLStep1.jpg)
+![Header Area Step 1](PSD/headerAreaHTMLStep1.png)
+
+Now, let's focus on the example of a gratitude log on the button.
+
+```html
+
+<div class="card">
+            <div class="card-content">
+              <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-64x64">
+                        <img src="img/128-5.jpg" alt="Placeholder image" class="face">
+                    </figure>
+                    <span class="streak">12</span>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-4">John Smith</p>
+                    <p class="subtitle is-6">12 grateful days streak</p>
+                  </div>
+              </div>
+          </div>
+            </div>
+            
+            <a class="button is-info is-inverted is-large">
+              <span>Start Living</span>
+              <span class="icon"><i class="fas fa-arrow-right"></i></span>
+            </a>
+      </div>
+```
+
+
+```css
+.button.is-info.is-inverted{
+	color: var(--dark-grey);
+	text-transform: uppercase;
+	font-family: 'source_sans_prosemibold',serif;
+	font-size: 1em;
+	letter-spacing: 0.2em;
+	padding: 1em 2em;}
+.button.is-info.is-inverted:hover{
+	background-color: var(--green);
+	color: var(--white)}
+/* Gratitude Log Example*/
+.card{
+	background-color: transparent;
+	box-shadow: 0 0 transparent;}
+.media-left{
+	position: relative;}
+img{
+	border-radius: 50%;}
+.streak{
+	font-family: 'source_sans_probold', sans-serif;
+	background-color: var(--green);
+	border-radius: 50%;
+	padding: 0.25em;
+	color: var(--white);
+	position: absolute;
+	font-size: 0.85em;
+	left: 45px;
+	top: -5px;
+    line-height: normal;}
+.media{
+	justify-content: center;}
+.media-content{
+	flex-grow: 0;}
+.media-content > .title{
+	font-family: 'pt_serifregular', serif;}
+.media-content > .subtitle{
+	font-family: 'source_sans_proregular', serif;
+}
+```

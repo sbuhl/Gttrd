@@ -194,6 +194,10 @@ node_modules      package-lock.json package.json
   &lt;/section&gt;
 </code></pre>
 
+<ol>
+<li>The css :</li>
+</ol>
+
 <pre><code class="css">:root{
 	--dark-grey : #0E0E0E;
 	--green  	: #96c218;
@@ -293,7 +297,74 @@ h2.subtitle{
 </code></pre>
 
 <p>This code allows us to arrive to this :
-<img src="PSD/headerAreaHTMLStep1.jpg" alt="Header Area Step 1" /></p>
+<img src="PSD/headerAreaHTMLStep1.png" alt="Header Area Step 1" /></p>
+
+<p>Now, let&#8217;s focus on the example of a gratitude log on the button.</p>
+
+<pre><code class="html">
+&lt;div class=&quot;card&quot;&gt;
+            &lt;div class=&quot;card-content&quot;&gt;
+              &lt;div class=&quot;media&quot;&gt;
+                  &lt;div class=&quot;media-left&quot;&gt;
+                    &lt;figure class=&quot;image is-64x64&quot;&gt;
+                        &lt;img src=&quot;img/128-5.jpg&quot; alt=&quot;Placeholder image&quot; class=&quot;face&quot;&gt;
+                    &lt;/figure&gt;
+                    &lt;span class=&quot;streak&quot;&gt;12&lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;media-content&quot;&gt;
+                    &lt;p class=&quot;title is-4&quot;&gt;John Smith&lt;/p&gt;
+                    &lt;p class=&quot;subtitle is-6&quot;&gt;12 grateful days streak&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;a class=&quot;button is-info is-inverted is-large&quot;&gt;
+              &lt;span&gt;Start Living&lt;/span&gt;
+              &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/a&gt;
+      &lt;/div&gt;
+</code></pre>
+
+<pre><code class="css">.button.is-info.is-inverted{
+	color: var(--dark-grey);
+	text-transform: uppercase;
+	font-family: 'source_sans_prosemibold',serif;
+	font-size: 1em;
+	letter-spacing: 0.2em;
+	padding: 1em 2em;}
+.button.is-info.is-inverted:hover{
+	background-color: var(--green);
+	color: var(--white)}
+/* Gratitude Log Example*/
+.card{
+	background-color: transparent;
+	box-shadow: 0 0 transparent;}
+.media-left{
+	position: relative;}
+img{
+	border-radius: 50%;}
+.streak{
+	font-family: 'source_sans_probold', sans-serif;
+	background-color: var(--green);
+	border-radius: 50%;
+	padding: 0.25em;
+	color: var(--white);
+	position: absolute;
+	font-size: 0.85em;
+	left: 45px;
+	top: -5px;
+    line-height: normal;}
+.media{
+	justify-content: center;}
+.media-content{
+	flex-grow: 0;}
+.media-content &gt; .title{
+	font-family: 'pt_serifregular', serif;}
+.media-content &gt; .subtitle{
+	font-family: 'source_sans_proregular', serif;
+}
+</code></pre>
 
 </body>
 </html>
