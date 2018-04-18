@@ -103,36 +103,40 @@ node_modules      package-lock.json package.json
 <p>Open up <code>index.html</code> and enter the following base HTML:</p>
 
 <pre><code class="html">	&lt;!DOCTYPE html&gt;
-	&lt;html&gt;
-	  &lt;head&gt;
-	    &lt;meta charset=&quot;utf-8&quot;&gt;
-	    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-	    &lt;title&gt;Gratitude Log&lt;/title&gt;
-	    &lt;link rel=&quot;stylesheet&quot; href=&quot;node_modules/normalize.css/normalize.css&quot;&gt;
-	    &lt;link rel=&quot;stylesheet&quot; href=&quot;node_modules/bulma/css/bulma.min.css&quot;&gt;
-	  &lt;/head&gt;
-	  &lt;body&gt;
-	  &lt;section class=&quot;section&quot;&gt;
-	    &lt;div class=&quot;container&quot;&gt;
-	      &lt;h1 class=&quot;title&quot;&gt;
-	        Gratitude Log
-	      &lt;/h1&gt;
-	      &lt;p class=&quot;subtitle&quot;&gt;
-	        My first website with &lt;strong&gt;Bulma&lt;/strong&gt;!
-	      &lt;/p&gt;
-	    &lt;/div&gt;
-	  &lt;/section&gt;
-	  &lt;/body&gt;
-	&lt;/html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;title&gt;Gratitude Log&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;node_modules/normalize.css/normalize.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;node_modules/bulma/css/bulma.min.css&quot;&gt;
+  &lt;script defer src=&quot;https://use.fontawesome.com/releases/v5.0.7/js/all.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;section class=&quot;section&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;h1 class=&quot;title&quot;&gt;
+        Gratitude Log
+      &lt;/h1&gt;
+      &lt;p class=&quot;subtitle&quot;&gt;
+        My first website with &lt;strong&gt;Bulma&lt;/strong&gt;!
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 <p>We have our first bit of code! Let&#8217;s break it down.</p>
 
-<p>The <head> section contains the necessary viewport tag so our media queries work correctly. Next, we give the page a title and include a <link> tag for the various Google fonts we want to use. The fonts here are based on those used in the design by Thomas. The next line may seem strange because we haven&#8217;t created a style.css file yet, but generating that file will be handled by our Sass compiler. Lastly, we include Modernizr.</p>
+<p>This code is based on starter template from Bulma. Really clean and short. The <head> section contains the necessary viewport tag so our media queries work correctly. I&#8217;ve linked the css files from the nodes folders and add a script to be able to use the icons from Font Awesome.</p>
 
-<p>The <body> element contains four other elements to hold each of the bands which appear on the design. I have applied some descriptive classes to the <section> elements so we can clearly see what they will be used for.</p>
+<p>The <body> element contains is almost empty for the moment. I will follow the process of Thomas for the rest of the page.</p>
 
-<h3 id="step2:">Step 2 :</h3>
+<h2 id="buildingtheheaderarea:">Building the header area :</h2>
+
+<p>We want something approaching this :
+<img src="/PSD/headerArea.png" alt="Header Area" /></p>
 
 <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;

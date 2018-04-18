@@ -75,36 +75,40 @@ Open up `index.html` and enter the following base HTML:
 
 ```html
 	<!DOCTYPE html>
-	<html>
-	  <head>
-	    <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <title>Gratitude Log</title>
-	    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
-	    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
-	  </head>
-	  <body>
-	  <section class="section">
-	    <div class="container">
-	      <h1 class="title">
-	        Gratitude Log
-	      </h1>
-	      <p class="subtitle">
-	        My first website with <strong>Bulma</strong>!
-	      </p>
-	    </div>
-	  </section>
-	  </body>
-	</html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gratitude Log</title>
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Gratitude Log
+      </h1>
+      <p class="subtitle">
+        My first website with <strong>Bulma</strong>!
+      </p>
+    </div>
+  </section>
+</body>
+</html>
 ```
 
 We have our first bit of code! Let's break it down. 
 
-The <head> section contains the necessary viewport tag so our media queries work correctly. Next, we give the page a title and include a <link> tag for the various Google fonts we want to use. The fonts here are based on those used in the design by Thomas. The next line may seem strange because we haven't created a style.css file yet, but generating that file will be handled by our Sass compiler. Lastly, we include Modernizr.
+This code is based on starter template from Bulma. Really clean and short. The <head> section contains the necessary viewport tag so our media queries work correctly. I've linked the css files from the nodes folders and add a script to be able to use the icons from Font Awesome. 
 
-The <body> element contains four other elements to hold each of the bands which appear on the design. I have applied some descriptive classes to the <section> elements so we can clearly see what they will be used for.
+The <body> element contains is almost empty for the moment. I will follow the process of Thomas for the rest of the page.
 
-### Step 2 :
+## Building the header area :
+
+We want something approaching this :
+![Header Area](/PSD/headerArea.png)
 
 ``` html
 <!DOCTYPE html>

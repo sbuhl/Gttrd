@@ -369,6 +369,17 @@
 		"oAP": "\/build\/PSD\/gttrd.psd",
 		"oF": 0
 		},
+	"\/PSD\/headerArea.png": {
+		"ft": 32768,
+		"iS": 791071,
+		"oA": 0,
+		"oAP": "\/build\/PSD\/headerArea.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/README.md": {
 		"cB": 0,
 		"cS": 0,
