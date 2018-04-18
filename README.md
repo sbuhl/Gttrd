@@ -1,87 +1,71 @@
-# Building an Elegant “Gratitude Log” Landing Page With Bulma
+# Tutorial : Building a “Gratitude Log” Landing Page With [Bulma](https://bulma.io)
 
-*avril 2018*
+*April 2018*
 
+In this tutorial I am going to run through the process of creating an elegant *Gratitude Log* landing page as designed [by Tomas Laurinavicius.](https://webdesign.tutsplus.com/tutorials/design-an-elegant-gratitude-log-landing-page-with-photoshop--cms-22787).
 
-In this tutorial I am going to run through the process of creating an elegant *Gratitude Log* landing page as designed in a [previous tutorial by Tomas Laurinavicius](https://webdesign.tutsplus.com/tutorials/design-an-elegant-gratitude-log-landing-page-with-photoshop--cms-22787).
+To build this page, we will use :
 
-To build this landing page, we will use a few tools and medias :
+* Tools : 
+	* [Bulma](https://bulma.io)
+	* [Normalize.css](http://necolas.github.io/normalize.css/)
+* Pictures : 
+	* [Chillin' in the sun](https://skitterphoto.com/photos/895/chilling-in-the-park)
+	* Avatars from [User Inter Faces](http://uifaces.com)
+* Fonts: 
+	* [PT Serif](https://www.fontsquirrel.com/fonts/pt-serif)
+	* [Playfair Display](https://www.fontsquirrel.com/fonts/playfair-display)
+	* [Source Sans Pro](https://www.fontsquirrel.com/fonts/source-sans-pro)
 
-* [Bulma](https://bulma.io)
-* [Normalize.css](http://necolas.github.io/normalize.css/)
-* [Chillin' in the sun]()
-* [PT Serif]()
-* [Playfair Display]()
-* [Source Sans Pro]()
-* [User Inter Faces]()
+## What's [Bulma](https://bulma.io) and why use it ?
 
-You can notice that we use the same tools as Thomas in the building of the design.
-
-I would like to learn a new framework : [Bulma](https://bulma.io). 
-
-## Why Bulma and not Bootstrap ?
-
-I've already build some websites with [Bootstrap](http://getbootstrap.com). I really enjoy playing with this CSS Framework. It's friendly, the documentation is great, they're a lot of tutoriel, it's responsive, it's evolving, etc... But. I wanted to learn a new framework. Just to discover a new tool and new techs. And I have no doubt it will improve my CSS skills. 
-
-### Is Bulma different from Bootstrap ?
-
-Short answer : Yes ! Long answer : [see here :-) ](https://bulma.io/alternative-to-bootstrap/)
-
-## File and Folder Structure
-
-We will keep the structure really simple. You will see that we only need a few of JS. So, go ahead and create your folders :
-
-* css/ 
-	- grtldStyle.css
-* img/
-	- 128-2.jpg
-	- 128-3.jpg
-	- 128-4.jpg
-	- 128-5.jpg
-	- 128.jpg
-	- summerTime.jpg
-* index.html
+Bulma is an open source CSS framework based on Flexbox and created by [Jeremy Thomas](https://jgthms.com/). I wanted to learn a new framework,  discover a new tool and I have no doubt it will improve my CSS skills. Bulma is an alternative to Bootstrap, Jeremy explain how [here](https://bulma.io/alternative-to-bootstrap/).
 
 ## Install Bulma
 
-I will install Bulma using `npm`.
+First, let's install Bulma. There are several ways to use Bulma. Here, I decided to install the Bulma's package with `npm` :
+* Open your terminal
+* Create a new folder
+* Initiate `npm`
+* Install `bulma`
 
-So first, I've to initiate npm : 
-
-```shell
-	npm init
-```
-
-After following the instruction, you will have a new file in your folder : package.json.
-Now, I can install bulma : 
 
 ```shell
-	npm install bulma
+	~/Web  mkdir Grttd
+ 	~/Web  cd Grttd
+ 	~/Web/Grttd  npm init
+	~/Web/Grttd  npm install bulma
 	npm notice created a lockfile as package-lock.json. You should commit this file.
 	+ bulma@0.7.0
 	added 1 package from 1 contributor in 2.019s
+	 ~/Web/Grttd  ls
+node_modules      package-lock.json package.json
 ```
 
-Now, you have a new file and a new folder :
-* node_modules/
-* package-lock.json
-
-In the `node_modules`, there is only one folder for *Bulma*
-Open this folder up and you will see something similar to the following:
-
-## Install normalize
+## Install [normalize.css](https://necolas.github.io/normalize.css/)
 
 ```shell
 	npm install normalize.css
 ```
 
-Back in the day it was Eric Meyer’s css reset, but now you should really be using normalize.css It takes out any of the discrepancies between browser’s default settings. Making all of the default styles the same.
+`Normalize.css is a small CSS file that provides better cross-browser consistency in the default styling of HTML elements. It’s a modern, HTML5-ready, alternative to the traditional CSS reset.`
 
-We will need one icon, so we will use [Font Awesome](http://fontawesome.com/) in our project, so do not forget to include it : 
-```html
-	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-```
+## Files and Folder structure
 
+So far, here are the files and the folder structure :
+* css/
+	- grttdStyle.css
+* img/
+	- 128-2.jpg
+	- 128-3.jpg
+	- 128-4.jpg
+	- 128-5.jpg
+	- summerTime.jpg
+* node_modules/
+	- bulma/
+	- normalize.css/
+* index.html
+Create the folders needed and already add the images.
 
 ## Let's begging to code
 

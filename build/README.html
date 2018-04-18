@@ -5,45 +5,78 @@
 </head>
 <body>
 
-<h1 id="buildinganelegant“gratitudelog”landingpagewithbulma">Building an Elegant “Gratitude Log” Landing Page With Bulma</h1>
+<h1 id="tutorial:buildinga“gratitudelog”landingpagewithbulmahttps:bulma.io">Tutorial : Building a “Gratitude Log” Landing Page With <a href="https://bulma.io">Bulma</a></h1>
 
-<p><em>avril 2018</em></p>
+<p><em>April 2018</em></p>
 
-<p>In this tutorial I am going to run through the process of creating an elegant <em>Gratitude Log</em> landing page as designed in a <a href="https://webdesign.tutsplus.com/tutorials/design-an-elegant-gratitude-log-landing-page-with-photoshop--cms-22787">previous tutorial by Tomas Laurinavicius</a>.</p>
+<p>In this tutorial I am going to run through the process of creating an elegant <em>Gratitude Log</em> landing page as designed <a href="https://webdesign.tutsplus.com/tutorials/design-an-elegant-gratitude-log-landing-page-with-photoshop--cms-22787">by Tomas Laurinavicius.</a>.</p>
 
-<p>To build this landing page, we will use a few tools and medias :</p>
+<p>To build this page, we will use :</p>
+
+<ul>
+<li>Tools :
 
 <ul>
 <li><a href="https://bulma.io">Bulma</a></li>
 <li><a href="http://necolas.github.io/normalize.css/">Normalize.css</a></li>
-<li><a href="">Chillin' in the sun</a></li>
-<li><a href="">PT Serif</a></li>
-<li><a href="">Playfair Display</a></li>
-<li><a href="">Source Sans Pro</a></li>
-<li><a href="">User Inter Faces</a></li>
+</ul></li>
+<li>Pictures :
+
+<ul>
+<li><a href="https://skitterphoto.com/photos/895/chilling-in-the-park">Chillin' in the sun</a></li>
+<li>Avatars from <a href="http://uifaces.com">User Inter Faces</a></li>
+</ul></li>
+<li>Fonts:
+
+<ul>
+<li><a href="https://www.fontsquirrel.com/fonts/pt-serif">PT Serif</a></li>
+<li><a href="https://www.fontsquirrel.com/fonts/playfair-display">Playfair Display</a></li>
+<li><a href="https://www.fontsquirrel.com/fonts/source-sans-pro">Source Sans Pro</a></li>
+</ul></li>
 </ul>
 
-<p>You can notice that we use the same tools as Thomas in the building of the design.</p>
+<h2 id="whatsbulmahttps:bulma.ioandwhyuseit">What&#8217;s <a href="https://bulma.io">Bulma</a> and why use it ?</h2>
 
-<p>I would like to learn a new framework : <a href="https://bulma.io">Bulma</a>.</p>
+<p>Bulma is an open source CSS framework based on Flexbox and created by <a href="https://jgthms.com/">Jeremy Thomas</a>. I wanted to learn a new framework, discover a new tool and I have no doubt it will improve my CSS skills. Bulma is an alternative to Bootstrap, Jeremy explain how <a href="https://bulma.io/alternative-to-bootstrap/">here</a>.</p>
 
-<h2 id="whybulmaandnotbootstrap">Why Bulma and not Bootstrap ?</h2>
+<h2 id="installbulma">Install Bulma</h2>
 
-<p>I&#8217;ve already build some websites with <a href="http://getbootstrap.com">Bootstrap</a>. I really enjoy playing with this CSS Framework. It&#8217;s friendly, the documentation is great, they&#8217;re a lot of tutoriel, it&#8217;s responsive, it&#8217;s evolving, etc&#8230; But. I wanted to learn a new framework. Just to discover a new tool and new techs. And I have no doubt it will improve my CSS skills.</p>
+<p>First, let&#8217;s install Bulma. There are several ways to use Bulma. Here, I decided to install the Bulma&#8217;s package with <code>npm</code> :</p>
 
-<h3 id="isbulmadifferentfrombootstrap">Is Bulma different from Bootstrap ?</h3>
+<ul>
+<li>Open your terminal</li>
+<li>Create a new folder</li>
+<li>Initiate <code>npm</code></li>
+<li>Install <code>bulma</code></li>
+</ul>
 
-<p>Short answer : Yes ! Long answer : <a href="https://bulma.io/alternative-to-bootstrap/">see here :-) </a></p>
+<pre><code class="shell">	~/Web  mkdir Grttd
+ 	~/Web  cd Grttd
+ 	~/Web/Grttd  npm init
+	~/Web/Grttd  npm install bulma
+	npm notice created a lockfile as package-lock.json. You should commit this file.
+	+ bulma@0.7.0
+	added 1 package from 1 contributor in 2.019s
+	 ~/Web/Grttd  ls
+node_modules      package-lock.json package.json
+</code></pre>
 
-<h2 id="fileandfolderstructure">File and Folder Structure</h2>
+<h2 id="installnormalize.csshttps:necolas.github.ionormalize.css">Install <a href="https://necolas.github.io/normalize.css/">normalize.css</a></h2>
 
-<p>We will keep the structure really simple. You will see that we only need a few of JS. So, go ahead and create your folders :</p>
+<pre><code class="shell">	npm install normalize.css
+</code></pre>
+
+<p><code>Normalize.css is a small CSS file that provides better cross-browser consistency in the default styling of HTML elements. It’s a modern, HTML5-ready, alternative to the traditional CSS reset.</code></p>
+
+<h2 id="filesandfolderstructure">Files and Folder structure</h2>
+
+<p>So far, here are the files and the folder structure :</p>
 
 <ul>
 <li>css/
 
 <ul>
-<li>grtldStyle.css</li>
+<li>grttdStyle.css</li>
 </ul></li>
 <li>img/
 
@@ -52,51 +85,17 @@
 <li>128&#8211;3.jpg</li>
 <li>128&#8211;4.jpg</li>
 <li>128&#8211;5.jpg</li>
-<li>128.jpg</li>
 <li>summerTime.jpg</li>
 </ul></li>
-<li>index.html</li>
-</ul>
-
-<h2 id="installbulma">Install Bulma</h2>
-
-<p>I will install Bulma using <code>npm</code>.</p>
-
-<p>So first, I&#8217;ve to initiate npm :</p>
-
-<pre><code class="shell">	npm init
-</code></pre>
-
-<p>After following the instruction, you will have a new file in your folder : package.json.
-Now, I can install bulma :</p>
-
-<pre><code class="shell">	npm install bulma
-	npm notice created a lockfile as package-lock.json. You should commit this file.
-	+ bulma@0.7.0
-	added 1 package from 1 contributor in 2.019s
-</code></pre>
-
-<p>Now, you have a new file and a new folder :</p>
+<li>node_modules/
 
 <ul>
-<li>node_modules/</li>
-<li>package-lock.json</li>
+<li>bulma/</li>
+<li>normalize.css/</li>
+</ul></li>
+<li>index.html
+Create the folders needed and already add the images.</li>
 </ul>
-
-<p>In the <code>node_modules</code>, there is only one folder for <em>Bulma</em>
-Open this folder up and you will see something similar to the following:</p>
-
-<h2 id="installnormalize">Install normalize</h2>
-
-<pre><code class="shell">	npm install normalize.css
-</code></pre>
-
-<p>Back in the day it was Eric Meyer’s css reset, but now you should really be using normalize.css It takes out any of the discrepancies between browser’s default settings. Making all of the default styles the same.</p>
-
-<p>We will need one icon, so we will use <a href="http://fontawesome.com/">Font Awesome</a> in our project, so do not forget to include it :</p>
-
-<pre><code class="html">	&lt;script defer src=&quot;https://use.fontawesome.com/releases/v5.0.7/js/all.js&quot;&gt;&lt;/script&gt;
-</code></pre>
 
 <h2 id="letsbeggingtocode">Let&#8217;s begging to code</h2>
 
