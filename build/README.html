@@ -102,7 +102,7 @@ node_modules      package-lock.json package.json
 
 <p>Open up <code>index.html</code> and enter the following base HTML:</p>
 
-<pre><code class="html">	&lt;!DOCTYPE html&gt;
+<pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=&quot;utf-8&quot;&gt;
@@ -133,7 +133,7 @@ node_modules      package-lock.json package.json
 
 <p>The <body> element contains is almost empty for the moment. I will follow the process of Thomas for the rest of the page.</p>
 
-<h2 id="buildingtheheaderarea:">Building the header area :</h2>
+<h3 id="buildingtheheaderarea:">Building the header area :</h3>
 
 <p>We want something approaching this :
 <img src="/PSD/headerArea.png" alt="Header Area" /></p>
@@ -141,7 +141,7 @@ node_modules      package-lock.json package.json
 <p>I think that a good start is to use the <a href="https://bulma.io/documentation/layout/hero/">hero class</a> from Bulma. With that in place, you just have to erase the useless html and make some CSS adjustment.</p>
 
 <ol>
-<li>The html :</li>
+<li>HTML :</li>
 </ol>
 
 <pre><code class="html">&lt;section class=&quot;hero is-success is-fullheight&quot;&gt;
@@ -195,7 +195,7 @@ node_modules      package-lock.json package.json
 </code></pre>
 
 <ol>
-<li>The css :</li>
+<li>CSS :</li>
 </ol>
 
 <pre><code class="css">:root{
@@ -299,32 +299,40 @@ h2.subtitle{
 <p>This code allows us to arrive to this :
 <img src="PSD/headerAreaHTMLStep1.png" alt="Header Area Step 1" /></p>
 
-<p>Now, let&#8217;s focus on the example of a gratitude log on the button.</p>
+<p>Now, let&#8217;s focus on the example of a gratitude log and on the button.</p>
+
+<ol>
+<li>HTML</li>
+</ol>
 
 <pre><code class="html">
 &lt;div class=&quot;card&quot;&gt;
-            &lt;div class=&quot;card-content&quot;&gt;
-              &lt;div class=&quot;media&quot;&gt;
-                  &lt;div class=&quot;media-left&quot;&gt;
-                    &lt;figure class=&quot;image is-64x64&quot;&gt;
-                        &lt;img src=&quot;img/128-5.jpg&quot; alt=&quot;Placeholder image&quot; class=&quot;face&quot;&gt;
-                    &lt;/figure&gt;
-                    &lt;span class=&quot;streak&quot;&gt;12&lt;/span&gt;
-                  &lt;/div&gt;
-                  &lt;div class=&quot;media-content&quot;&gt;
-                    &lt;p class=&quot;title is-4&quot;&gt;John Smith&lt;/p&gt;
-                    &lt;p class=&quot;subtitle is-6&quot;&gt;12 grateful days streak&lt;/p&gt;
-                  &lt;/div&gt;
-              &lt;/div&gt;
+    &lt;div class=&quot;card-content&quot;&gt;
+      &lt;div class=&quot;media&quot;&gt;
+          &lt;div class=&quot;media-left&quot;&gt;
+            &lt;figure class=&quot;image is-64x64&quot;&gt;
+                &lt;img src=&quot;img/128-5.jpg&quot; alt=&quot;Placeholder image&quot; class=&quot;face&quot;&gt;
+            &lt;/figure&gt;
+            &lt;span class=&quot;streak&quot;&gt;12&lt;/span&gt;
           &lt;/div&gt;
-            &lt;/div&gt;
-            
-            &lt;a class=&quot;button is-info is-inverted is-large&quot;&gt;
-              &lt;span&gt;Start Living&lt;/span&gt;
-              &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-            &lt;/a&gt;
+          &lt;div class=&quot;media-content&quot;&gt;
+            &lt;p class=&quot;title is-4&quot;&gt;John Smith&lt;/p&gt;
+            &lt;p class=&quot;subtitle is-6&quot;&gt;12 grateful days streak&lt;/p&gt;
+          &lt;/div&gt;
       &lt;/div&gt;
+  &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;a class=&quot;button is-info is-inverted is-large&quot;&gt;
+      &lt;span&gt;Start Living&lt;/span&gt;
+      &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 </code></pre>
+
+<ol>
+<li>CSS</li>
+</ol>
 
 <pre><code class="css">.button.is-info.is-inverted{
 	color: var(--dark-grey);
@@ -354,7 +362,7 @@ img{
 	font-size: 0.85em;
 	left: 45px;
 	top: -5px;
-    line-height: normal;}
+	line-height: normal;}
 .media{
 	justify-content: center;}
 .media-content{
@@ -366,8 +374,268 @@ img{
 }
 </code></pre>
 
-<p>Here the result :
+<p>Here is the result :
 <img src="PSD/headerAreaHTMLStep2.png" alt="Header Area Step 2" /></p>
+
+<h3 id="buildingthebodyofthesite:">Building the body of the site :</h3>
+
+<p>Relatively easy and fast part. First, without the 3 examples :</p>
+
+<ol>
+<li>HTML</li>
+</ol>
+
+<pre><code class="html"><!-- Daily Gratitude Log -->
+&lt;section class=&quot;section&quot;&gt;
+  &lt;div class=&quot;container content has-text-centered&quot;&gt;
+      &lt;h1 class=&quot;title&quot;&gt;Daily Gratitude Log&lt;/h1&gt;
+      &lt;h2 class=&quot;subtitle corp&quot;&gt;Do you know what distinguishes successful people from unsuccessful ones ? Actually many things. but practice gratitude is one thing everty successful individuals is doing everyday. John F. Kennedy, Oprah Winfrey, Ralph Waldo Emerson, Seneca, Dale Carnegie,... Ready to join them ?&lt;/h2&gt;
+      &lt;a class=&quot;button is-info is-not-inverted green&quot;&gt;
+        &lt;span&gt;Start Living&lt;/span&gt;
+        &lt;span class=&quot;icon&quot;&gt;
+            &lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;hr&gt;
+<!-- Get Inspired -->
+&lt;section class=&quot;section&quot;&gt;
+  &lt;div class=&quot;container content has-text-centered&quot;&gt;
+    &lt;h1 class=&quot;title&quot;&gt;Get Inspired&lt;/h1&gt;
+      &lt;h2 class=&quot;subtitle corp&quot;&gt;Get inspired from amazing community of positive people. Discover what people are grateful for and start appreciate things you have been taking for granted. Growth mindset is what distinguished losers and winners.&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;hr&gt;
+<!-- Create Gratitude Log-->
+&lt;section class=&quot;section&quot;&gt;
+  &lt;div class=&quot;container content has-text-centered&quot;&gt;
+      &lt;h1 class=&quot;title&quot;&gt;Create Gratitude Log&lt;/h1&gt;
+      &lt;input class=&quot;button email&quot; type=&quot;text&quot; placeholder=&quot;Enter your email&quot;&gt;
+      &lt;a class=&quot;button is-info is-not-inverted&quot;&gt;
+        &lt;span&gt;Start Living&lt;/span&gt;
+        &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+
+<ol>
+<li>CSS</li>
+</ol>
+
+<p>Really few modifications</p>
+
+<pre><code class="css">.content h1.title{
+	font-family: 'playfair_displayblack', serif;
+	font-size: 3.125em;
+	letter-spacing: 0.1em;
+	line-height: 1.1em;}
+.content h2.subtitle{
+	font-family: 'pt_serifregular', serif;
+	font-size: 1.125em;
+	line-height: 1.1em;
+	font-weight: 300;
+	width: 60%;
+	margin: auto auto 2em;
+	padding-top: 2em;}
+.button.is-info.is-not-inverted{
+	color: var(--dark-grey);
+	text-transform: uppercase;
+	font-family: 'source_sans_prosemibold',serif;
+	font-size: 1em;
+	letter-spacing: 0.2em;
+	padding: 1em 2em;
+	background-color: var(--green);
+	color: var(--white);}
+.button.is-info.is-not-inverted:hover{
+	background-color: var(--white);
+	color: var(--green);}
+</code></pre>
+
+<h3 id="buildingtheexamplesofthelogs:">Building the examples of the logs :</h3>
+
+<p>I used the <a href="https://bulma.io/documentation/components/card/">Card Component</a> of Bulma.</p>
+
+<ol>
+<li>HTML</li>
+</ol>
+
+<pre><code class="html">&lt;section class=&quot;section&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;columns&quot;&gt;
+          &lt;div class=&quot;column&quot;&gt;
+            &lt;div class=&quot;card&quot;&gt;
+              &lt;div class=&quot;card-content&quot;&gt;
+                &lt;div class=&quot;media&quot;&gt;
+                    &lt;div class=&quot;media-left&quot;&gt;
+                      &lt;figure class=&quot;image is-64x64&quot;&gt;
+                          &lt;img src=&quot;/img/128-2.jpg&quot; alt=&quot;Placeholder image&quot; class=&quot;face&quot;&gt;
+                      &lt;/figure&gt;
+                      &lt;span class=&quot;streak&quot;&gt;55&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;media-content&quot;&gt;
+                      &lt;p class=&quot;title is-4&quot;&gt;John Smith&lt;/p&gt;
+                      &lt;p class=&quot;subtitle is-6&quot;&gt;55 grateful days streak&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;content&quot;&gt;
+                    I’m very grateful for the chance to travel the world and meet so many incredible people that literally changed my life. Enjoying every signle day and having no regrets.
+                &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+          [...]
+          
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+</code></pre>
+
+<ol>
+<li>CSS</li>
+</ol>
+
+<pre><code class="css">.card-content &gt; .content{
+	font-family: 'pt_serifregular', serif;
+	font-style: italic;
+	font-weight: 300;}
+</code></pre>
+
+<h3 id="buildingthefooter:">Building the footer :</h3>
+
+<ol>
+<li>HTML</li>
+</ol>
+
+<pre><code class="html"><!-- FOOTER -->
+&lt;footer class=&quot;footer&quot;&gt;
+	&lt;div class=&quot;container&quot;&gt;
+		&lt;div class=&quot;columns&quot;&gt;
+			&lt;div class=&quot;column is-one-third&quot;&gt;
+				&lt;p class=&quot;bd-footer-link-title&quot;&gt;
+					&lt;a class=&quot;navbar-item&quot;&gt;Grttd&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;column&quot;&gt;
+				&lt;p class=&quot;bd-footer-link-title&quot;&gt;About&lt;/p&gt;
+				&lt;p class=&quot;bd-footer-link&quot;&gt;&lt;a href=&quot;#&quot;&gt;Story&lt;/a&gt;&lt;/p&gt;
+				&lt;p class=&quot;bd-footer-link&quot;&gt;&lt;a href=&quot;#&quot;&gt;Team&lt;/a&gt;&lt;/p&gt;
+				&lt;p class=&quot;bd-footer-link&quot;&gt;&lt;a href=&quot;#&quot;&gt;Community&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;column&quot;&gt;
+				&lt;p class=&quot;bd-footer-link-title&quot;&gt;Legal&lt;/p&gt;
+				&lt;p class=&quot;bd-footer-link&quot;&gt;&lt;a href=&quot;#&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/p&gt;
+				&lt;p class=&quot;bd-footer-link&quot;&gt;&lt;a href=&quot;#&quot;&gt;Terms of services&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;column&quot;&gt;
+				&lt;p class=&quot;bd-footer-link-title&quot;&gt;Connect&lt;/p&gt;
+				&lt;p class=&quot;bd-footer-link&quot;&gt;&lt;a href=&quot;#&quot;&gt;Twitter&lt;/a&gt;&lt;/p&gt;
+				&lt;p class=&quot;bd-footer-link&quot;&gt;&lt;a href=&quot;#&quot;&gt;Instagram&lt;/a&gt;&lt;/p&gt;
+				&lt;p class=&quot;bd-footer-link&quot;&gt;&lt;a href=&quot;#&quot;&gt;Fcebook&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;column&quot;&gt;
+				&lt;p class=&quot;bd-footer-link-title&quot;&gt;Address&lt;/p&gt;
+				&lt;p class=&quot;bd-footer-link&quot;&gt;Gratitude Log Ltd.&lt;/p&gt;
+				&lt;p class=&quot;bd-footer-link&quot;&gt;Station Street&lt;/p&gt;
+				&lt;p class=&quot;bd-footer-link&quot;&gt;London City&lt;/p&gt;
+				&lt;p class=&quot;bd-footer-link&quot;&gt;United Kingdom&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/footer&gt;
+</code></pre>
+
+<ol>
+<li>CSS</li>
+</ol>
+
+<pre><code class="css">.footer{
+	background-color: #2d2d2d;
+	padding-bottom: 4em;
+	margin-top: 3em;}
+.footer a:hover{
+	background-color: transparent;
+	color: var(--white);}
+.bd-footer-link-title{
+    font-family: 'source_sans_proregular', sans-serif;
+    text-transform: uppercase;
+    color: var(--white);}
+.bd-footer-link-title a{
+    font-family: 'playfair_displayblack_italic', serif;
+    font-size: 1.6em;
+    text-transform: none;
+    color: var(--white);
+    padding-left: 0 ;}
+.bd-footer-link,
+.bd-footer-link a{
+    font-family: 'source_sans_proregular', sans-serif;
+    color: var(--whiter);}
+.bd-footer-link a:hover{
+    text-decoration: underline;}
+</code></pre>
+
+<p>Here is the final result on a desktop screen :
+<img src="/PSD/desktopResult.png" alt="Result desktop" /></p>
+
+<p>So, are we done ?
+Let&#8217;s check the result on a smartphone :
+<img src="/PSD/iphoneResult.png" alt="Result iphone" /></p>
+
+<p>Not really what we wanted&#8230;</p>
+
+<h3 id="checktheresponsivenessofthewebsite">Check the responsiveness of the website</h3>
+
+<p>It&#8217;s mainly due to the size of the text. So, a little bit of CSS :</p>
+
+<pre><code class="css">@media (max-width: 576px) { 
+	h1.title{
+		font-size: 1.75em;}
+	h2.subtitle{
+		font-size: 1.3em;}
+	.subtitle.is-6{
+		font-size: 0.9rem;}
+	.content h1.title{
+		font-size: 1.4em;}
+	.content h2.subtitle{
+		font-size: 1.1em;
+		width: 100%;}
+}
+</code></pre>
+
+<p>You also noticed that, when I click on the burger menu, nothing happens&#8230; So, let&#8217;s fix it with a little bit of <a href="https://bulma.io/documentation/components/navbar/">JS as mentionned on Bulma</a> :</p>
+
+<pre><code class="javascript">&lt;script&gt;
+    document.addEventListener('DOMContentLoaded', function () {
+
+  // Get all &quot;navbar-burger&quot; elements
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length &gt; 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        // Get the target from the &quot;data-target&quot; attribute
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        // Toggle the class on both the &quot;navbar-burger&quot; and the &quot;navbar-menu&quot;
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+  &lt;/script&gt;
+</code></pre>
+
+<p>This way, I think that everything is fine :
+<img src="/PSD/iphoneResultb.png" alt="Result on smartphone" /></p>
 
 </body>
 </html>

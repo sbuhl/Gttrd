@@ -351,6 +351,17 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/PSD\/desktopResult.png": {
+		"ft": 32768,
+		"iS": 2593018,
+		"oA": 0,
+		"oAP": "\/build\/PSD\/desktopResult.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/PSD\/gttrd.jpg": {
 		"ft": 16384,
 		"iS": 923888,
@@ -399,6 +410,28 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/PSD\/iphoneResult.png": {
+		"ft": 32768,
+		"iS": 2435540,
+		"oA": 0,
+		"oAP": "\/build\/PSD\/iphoneResult.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/PSD\/iphoneResultb.png": {
+		"ft": 32768,
+		"iS": 6125493,
+		"oA": 0,
+		"oAP": "\/build\/PSD\/iphoneResultb.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},

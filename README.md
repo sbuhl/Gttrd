@@ -74,7 +74,7 @@ Create the folders needed and already add the images.
 Open up `index.html` and enter the following base HTML:
 
 ```html
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -105,13 +105,13 @@ This code is based on starter template from Bulma. Really clean and short. The <
 
 The <body> element contains is almost empty for the moment. I will follow the process of Thomas for the rest of the page.
 
-## Building the header area :
+### Building the header area :
 
 We want something approaching this :
 ![Header Area](/PSD/headerArea.png)
 
 I think that a good start is to use the [hero class](https://bulma.io/documentation/layout/hero/) from Bulma. With that in place, you just have to erase the useless html and make some CSS adjustment.
-1. The html :
+1. HTML :
 
 ``` html
 <section class="hero is-success is-fullheight">
@@ -164,7 +164,7 @@ I think that a good start is to use the [hero class](https://bulma.io/documentat
   </section>
 ```
 
-1. The css :
+1. CSS :
 
 ``` css
 :root{
@@ -268,35 +268,35 @@ h2.subtitle{
 This code allows us to arrive to this :
 ![Header Area Step 1](PSD/headerAreaHTMLStep1.png)
 
-Now, let's focus on the example of a gratitude log on the button.
-
+Now, let's focus on the example of a gratitude log and on the button.
+1. HTML
 ```html
 
 <div class="card">
-            <div class="card-content">
-              <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-64x64">
-                        <img src="img/128-5.jpg" alt="Placeholder image" class="face">
-                    </figure>
-                    <span class="streak">12</span>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-4">John Smith</p>
-                    <p class="subtitle is-6">12 grateful days streak</p>
-                  </div>
-              </div>
+    <div class="card-content">
+      <div class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+                <img src="img/128-5.jpg" alt="Placeholder image" class="face">
+            </figure>
+            <span class="streak">12</span>
           </div>
-            </div>
-            
-            <a class="button is-info is-inverted is-large">
-              <span>Start Living</span>
-              <span class="icon"><i class="fas fa-arrow-right"></i></span>
-            </a>
+          <div class="media-content">
+            <p class="title is-4">John Smith</p>
+            <p class="subtitle is-6">12 grateful days streak</p>
+          </div>
       </div>
+  </div>
+    </div>
+    
+    <a class="button is-info is-inverted is-large">
+      <span>Start Living</span>
+      <span class="icon"><i class="fas fa-arrow-right"></i></span>
+    </a>
+</div>
 ```
 
-
+1. CSS
 ```css
 .button.is-info.is-inverted{
 	color: var(--dark-grey);
@@ -326,7 +326,7 @@ img{
 	font-size: 0.85em;
 	left: 45px;
 	top: -5px;
-    line-height: normal;}
+	line-height: normal;}
 .media{
 	justify-content: center;}
 .media-content{
@@ -339,5 +339,256 @@ img{
 ```
 
 
-Here the result : 
+Here is the result : 
 ![Header Area Step 2](PSD/headerAreaHTMLStep2.png)
+
+### Building the body of the site :
+
+Relatively easy and fast part. First, without the 3 examples : 
+
+1. HTML
+
+```html
+<!-- Daily Gratitude Log -->
+<section class="section">
+  <div class="container content has-text-centered">
+      <h1 class="title">Daily Gratitude Log</h1>
+      <h2 class="subtitle corp">Do you know what distinguishes successful people from unsuccessful ones ? Actually many things. but practice gratitude is one thing everty successful individuals is doing everyday. John F. Kennedy, Oprah Winfrey, Ralph Waldo Emerson, Seneca, Dale Carnegie,... Ready to join them ?</h2>
+      <a class="button is-info is-not-inverted green">
+        <span>Start Living</span>
+        <span class="icon">
+            <i class="fas fa-arrow-right"></i>
+        </span>
+    </a>
+  </div>
+</section>
+<hr>
+<!-- Get Inspired -->
+<section class="section">
+  <div class="container content has-text-centered">
+    <h1 class="title">Get Inspired</h1>
+      <h2 class="subtitle corp">Get inspired from amazing community of positive people. Discover what people are grateful for and start appreciate things you have been taking for granted. Growth mindset is what distinguished losers and winners.</h2>
+  </div>
+</section>
+<hr>
+<!-- Create Gratitude Log-->
+<section class="section">
+  <div class="container content has-text-centered">
+      <h1 class="title">Create Gratitude Log</h1>
+      <input class="button email" type="text" placeholder="Enter your email">
+      <a class="button is-info is-not-inverted">
+        <span>Start Living</span>
+        <span class="icon"><i class="fas fa-arrow-right"></i></span>
+    </a>
+  </div>
+</section>
+```
+
+2. CSS
+
+Really few modifications
+```css
+.content h1.title{
+	font-family: 'playfair_displayblack', serif;
+	font-size: 3.125em;
+	letter-spacing: 0.1em;
+	line-height: 1.1em;}
+.content h2.subtitle{
+	font-family: 'pt_serifregular', serif;
+	font-size: 1.125em;
+	line-height: 1.1em;
+	font-weight: 300;
+	width: 60%;
+	margin: auto auto 2em;
+	padding-top: 2em;}
+.button.is-info.is-not-inverted{
+	color: var(--dark-grey);
+	text-transform: uppercase;
+	font-family: 'source_sans_prosemibold',serif;
+	font-size: 1em;
+	letter-spacing: 0.2em;
+	padding: 1em 2em;
+	background-color: var(--green);
+	color: var(--white);}
+.button.is-info.is-not-inverted:hover{
+	background-color: var(--white);
+	color: var(--green);}
+```
+
+
+### Building the examples of the logs :
+
+I used the [Card Component](https://bulma.io/documentation/components/card/) of Bulma.
+
+1. HTML
+```html
+<section class="section">
+    <div class="container">
+        <div class="columns">
+          <div class="column">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-64x64">
+                          <img src="/img/128-2.jpg" alt="Placeholder image" class="face">
+                      </figure>
+                      <span class="streak">55</span>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">John Smith</p>
+                      <p class="subtitle is-6">55 grateful days streak</p>
+                    </div>
+                </div>
+                <div class="content">
+                    I’m very grateful for the chance to travel the world and meet so many incredible people that literally changed my life. Enjoying every signle day and having no regrets.
+                </div>
+            </div>
+          </div>
+          </div>
+          [...]
+          
+        </div>
+    </div>
+</section>
+
+```
+
+2. CSS
+```css
+.card-content > .content{
+	font-family: 'pt_serifregular', serif;
+	font-style: italic;
+	font-weight: 300;}
+```
+
+### Building the footer :
+
+1. HTML
+
+```html
+<!-- FOOTER -->
+<footer class="footer">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-one-third">
+				<p class="bd-footer-link-title">
+					<a class="navbar-item">Grttd</a></p>
+			</div>
+			<div class="column">
+				<p class="bd-footer-link-title">About</p>
+				<p class="bd-footer-link"><a href="#">Story</a></p>
+				<p class="bd-footer-link"><a href="#">Team</a></p>
+				<p class="bd-footer-link"><a href="#">Community</a></p>
+			</div>
+			<div class="column">
+				<p class="bd-footer-link-title">Legal</p>
+				<p class="bd-footer-link"><a href="#">Privacy Policy</a></p>
+				<p class="bd-footer-link"><a href="#">Terms of services</a></p>
+			</div>
+			<div class="column">
+				<p class="bd-footer-link-title">Connect</p>
+				<p class="bd-footer-link"><a href="#">Twitter</a></p>
+				<p class="bd-footer-link"><a href="#">Instagram</a></p>
+				<p class="bd-footer-link"><a href="#">Fcebook</a></p>
+			</div>
+			<div class="column">
+				<p class="bd-footer-link-title">Address</p>
+				<p class="bd-footer-link">Gratitude Log Ltd.</p>
+				<p class="bd-footer-link">Station Street</p>
+				<p class="bd-footer-link">London City</p>
+				<p class="bd-footer-link">United Kingdom</p>
+			</div>
+		</div>
+	</div>
+</footer>
+```
+
+2. CSS
+```css
+.footer{
+	background-color: #2d2d2d;
+	padding-bottom: 4em;
+	margin-top: 3em;}
+.footer a:hover{
+	background-color: transparent;
+	color: var(--white);}
+.bd-footer-link-title{
+    font-family: 'source_sans_proregular', sans-serif;
+    text-transform: uppercase;
+    color: var(--white);}
+.bd-footer-link-title a{
+    font-family: 'playfair_displayblack_italic', serif;
+    font-size: 1.6em;
+    text-transform: none;
+    color: var(--white);
+    padding-left: 0 ;}
+.bd-footer-link,
+.bd-footer-link a{
+    font-family: 'source_sans_proregular', sans-serif;
+    color: var(--whiter);}
+.bd-footer-link a:hover{
+    text-decoration: underline;}
+```
+
+Here is the final result on a desktop screen :
+![Result desktop](/PSD/desktopResult.png)
+
+So, are we done ?
+Let's check the result on a smartphone :
+![Result iphone](/PSD/iphoneResult.png)
+
+Not really what we wanted...
+
+### Check the responsiveness of the website
+
+It's mainly due to the size of the text. So, a little bit of CSS :
+```css
+@media (max-width: 576px) { 
+	h1.title{
+		font-size: 1.75em;}
+	h2.subtitle{
+		font-size: 1.3em;}
+	.subtitle.is-6{
+		font-size: 0.9rem;}
+	.content h1.title{
+		font-size: 1.4em;}
+	.content h2.subtitle{
+		font-size: 1.1em;
+		width: 100%;}
+}
+```
+
+You also noticed that, when I click on the burger menu, nothing happens... So, let's fix it with a little bit of [JS as mentionned on Bulma](https://bulma.io/documentation/components/navbar/) : 
+```javascript
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+  // Get all "navbar-burger" elements
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        // Get the target from the "data-target" attribute
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+  </script>
+```
+
+This way, I think that everything is fine : 
+![Result on smartphone](/PSD/iphoneResultb.png)
