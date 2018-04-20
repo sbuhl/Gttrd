@@ -32,6 +32,139 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/fonts\/playfairdisplay-black-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/playfairdisplay-black-webfont.woff",
+		"oF": 0
+		},
+	"\/fonts\/playfairdisplay-black-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/playfairdisplay-black-webfont.woff2",
+		"oF": 0
+		},
+	"\/fonts\/playfairdisplay-bolditalic-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/playfairdisplay-bolditalic-webfont.ttf",
+		"oF": 0
+		},
+	"\/fonts\/playfairdisplay-bolditalic-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/playfairdisplay-bolditalic-webfont.woff",
+		"oF": 0
+		},
+	"\/fonts\/playfairdisplay-bolditalic-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/playfairdisplay-bolditalic-webfont.woff2",
+		"oF": 0
+		},
+	"\/fonts\/playfairdisplay-italic-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/playfairdisplay-italic-webfont.woff",
+		"oF": 0
+		},
+	"\/fonts\/playfairdisplay-italic-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/playfairdisplay-italic-webfont.woff2",
+		"oF": 0
+		},
+	"\/fonts\/ptf55f-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/ptf55f-webfont.ttf",
+		"oF": 0
+		},
+	"\/fonts\/ptf55f-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/ptf55f-webfont.woff",
+		"oF": 0
+		},
+	"\/fonts\/ptf55f-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/ptf55f-webfont.woff2",
+		"oF": 0
+		},
+	"\/fonts\/ptf76f-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/ptf76f-webfont.woff",
+		"oF": 0
+		},
+	"\/fonts\/ptf76f-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/ptf76f-webfont.woff2",
+		"oF": 0
+		},
+	"\/fonts\/sourcesanspro-bold-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/sourcesanspro-bold-webfont.woff",
+		"oF": 0
+		},
+	"\/fonts\/sourcesanspro-bold-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/sourcesanspro-bold-webfont.woff2",
+		"oF": 0
+		},
+	"\/fonts\/sourcesanspro-regular-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/sourcesanspro-regular-webfont.woff",
+		"oF": 0
+		},
+	"\/fonts\/sourcesanspro-regular-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/sourcesanspro-regular-webfont.woff2",
+		"oF": 0
+		},
+	"\/fonts\/sourcesanspro-semibold-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/sourcesanspro-semibold-webfont.ttf",
+		"oF": 0
+		},
+	"\/fonts\/sourcesanspro-semibold-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/sourcesanspro-semibold-webfont.woff",
+		"oF": 0
+		},
+	"\/fonts\/sourcesanspro-semibold-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/sourcesanspro-semibold-webfont.woff2",
+		"oF": 0
+		},
 	"\/img\/128-2.jpg": {
 		"ft": 16384,
 		"iS": 2865,
@@ -71,17 +204,6 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "\/build\/img\/128-5.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/128.jpg": {
-		"ft": 16384,
-		"iS": 3249,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "\/build\/img\/128.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
